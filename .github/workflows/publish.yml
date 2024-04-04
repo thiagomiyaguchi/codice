@@ -3,7 +3,7 @@ name: Publish Build
 on:
   push:
     branches:
-      - master # Altere para a branch principal do seu projeto
+      - master # Altere para a branch principal do seu  projeto
 
 jobs:
   build:
