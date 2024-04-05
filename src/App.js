@@ -1,7 +1,7 @@
-import './App.css';
+import "./App.css";
 
 function App() {
-  return <div className='App'>Esta é a branch Thiago</div>;
+  return <div className="App">Teste</div>;
 }
 
 export default App;
