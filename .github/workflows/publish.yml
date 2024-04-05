@@ -3,7 +3,7 @@ name: Publish Build
 on:
   push:
     branches:
-      - master # Altere para a branch principal do seu projeto
+      - main # Altere para a branch principal do seu projeto
 
 jobs:
   build:
@@ -11,10 +11,15 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v2
 
-      - name: Install dependencies
-        run: npm install
+      - name: Install dependencies and build
+        run: |
+          npm install
+          npm run build
 
-      - name: Build
-        run: npm run build
+      - name: Publish Build
+        uses: actions/upload-artifact@v2
+        with:
+          name: build
+          path: build
