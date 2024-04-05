@@ -3,26 +3,23 @@ name: Publish Build
 on:
   push:
     branches:
-      - master # Altere para a branch principal do seu  projeto
+      - master # Altere para a branch principal do seu projeto
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./build
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v2
 
       - name: Install dependencies and build
         run: |
           npm install
           npm run build
 
-      - name: Teste
-        uses: actions/upload-artifact@v4
+      - name: Publish Build
+        uses: actions/upload-artifact@v2
         with:
-          name: my-artifact
-          path: ./build # or path/to/artifact
+          name: build
+          path: build
