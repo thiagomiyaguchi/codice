@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: build
+        working-directory: ./
 
     steps:
       - name: Checkout Repository
@@ -26,4 +26,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: build
-          path: ./build
+          path: ./
