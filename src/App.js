@@ -1,3 +1,4 @@
+
 import './App.css';
 import Navbar from './Components/Navbar/Navbar';
 import styled from 'styled-components';
@@ -63,6 +64,7 @@ function App() {
       <p>Some text some text some text some text..</p>
     </Container>
   );
+
 }
 
 export default App;
